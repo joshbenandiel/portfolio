@@ -1,0 +1,125 @@
+.contact-wrap {
+    margin-top: 240px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-wrap h2{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #A1A2A3;
+    margin-bottom: 30px;
+}
+
+
+
+.contact-textarea {
+    background: rgb(33,36,41);
+    background-image: linear-gradient(to right top, #313337, #2d2f33, #292b30, #25282c, #212429);
+    margin-top: 12px;
+    height: 240px;
+    width: 30em;
+    resize: none;
+    border-radius: 12px;
+    padding-left: 20px;
+    padding-top: 20px;
+    color: #fff;
+}
+
+
+
+.col-wrapper1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.col-wrapper2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.info-phone {
+    color: #3DD650;
+    margin-bottom: 20px;
+}
+
+.info-map {
+    color: #4E06FC;
+    margin-bottom: 20px;
+}
+
+.info-envelope {
+    color: #F34D50;
+    margin-bottom: 20px;
+}
+
+.submit-form {
+    
+    margin-top: 50px;
+}
+
+.info-wrapper {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.info-wrapper h4{
+    color:#A1A2A3;
+    font-size: 1.2rem;
+}
+
+.phone-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.map-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.email-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media screen and (max-width: 1050px) {
+    .col-wrapper1 {
+        align-items: center;
+    }
+    .col-wrapper2 {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .phone-wrapper {
+        padding: 20px;
+    }
+    .email-wrapper {
+        padding: 20px;
+    }
+    .map-wrapper {
+        padding: 20px 120px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact-input {
+        width: 26em !important;
+    }
+
+    .contact-textarea {
+        width: 26em;
+    }
+}

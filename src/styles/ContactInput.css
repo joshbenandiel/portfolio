@@ -1,0 +1,10 @@
+.contact-input {
+  background: rgb(33,36,41);
+  background-image: linear-gradient(to right top, #313337, #2d2f33, #292b30, #25282c, #212429);
+  width: 30em;
+  height: 4em;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin: 12px;
+  color: #fff;
+}

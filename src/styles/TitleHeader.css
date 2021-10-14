@@ -1,0 +1,28 @@
+
+
+.red-underline {
+  background-color: #FF0452;
+  height: 2px;
+  width: 60px;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.title-wrapper h2 {
+  margin-top: 30px;
+  color: #A1A2A3;
+  font-size: 1.5rem;
+  margin-bottom: 80px;
+}
+
+.title-name {
+  font-size: 1.3rem;
+  color: #fff;
+}

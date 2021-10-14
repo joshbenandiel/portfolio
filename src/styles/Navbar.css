@@ -1,0 +1,288 @@
+* {
+    font-family: 'Roboto', sans-serif;;
+}
+
+
+.my-navbar{
+    display: flex;
+    color: #fff;
+    justify-content: flex-start;
+    align-items: center;
+    
+  
+}
+.my-navbar p {
+    text-transform: uppercase;
+    
+}
+
+.nav-logo {
+    display: flex;
+    width: 200px;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.menu-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+   
+}
+
+.nav-list:hover {
+    color: #FF0452;
+    
+}
+.nav-list {
+    list-style: none;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.col-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+.hire-me-button {
+    
+    
+    box-shadow: -1px -15px 95px -9px rgba(255,122,122,1);
+ 
+    
+}
+
+.logo-color {
+    
+    color: #FF0452;
+}
+
+.logo-size {
+    color: #FF0452;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.burger {
+    background: transparent;
+    display: none;
+}
+
+
+.burger div {
+    
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    
+} 
+
+
+.menu-var  {
+    width: 50%;
+}
+
+.btn.burger-x {
+    position: absolute;
+    top: 0px;
+    right: 1rem;
+    
+   
+}
+
+.navbar-wrapper {
+    overflow: hidden;
+    height: 0vh;
+}
+
+.is-open {
+    z-index: 3;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background-color: #212429;
+    transition: 350ms;
+}
+
+
+
+.new-menu-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    padding-left: 0px;
+
+}
+
+.menu-list {
+    color: #fff;
+    list-style: none;
+    padding: 20px;
+    border-bottom: 2px solid rgba(133,127,127,0.75);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    
+    
+}
+
+.menu-list:hover {
+    background: #FF0452;
+    color: #fff;
+    cursor: pointer;
+    transition: 350ms;
+}
+
+.menu-wrapper {
+    position: relative;
+}
+
+.container-nav-hide {
+    display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+
+    .nav-logo {
+        font-size: 2.5rem;
+        justify-content: flex;
+        margin-left: 30px;
+        
+        
+    }
+
+    .menu-var {
+        display: none;
+    }
+
+   .col-button {
+       display: flex;
+       justify-content: space-around;
+       align-items: baseline;
+   
+   }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        padding-top: 10px
+    }
+    .container-nav {
+        z-index: 2;
+        
+        position: fixed;
+    }     
+
+    .is-open {
+        margin-top: -100px;
+        position: fixed;
+    }
+    
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    
+
+    .nav-logo {
+        font-size: 2.5rem;
+        display: flex;
+        justify-content: flex-start;
+        
+    }
+
+    .col-button {
+        display: flex;
+        align-items: baseline;
+    }
+
+
+}
+
+@media screen and (max-width: 970px) {
+    .nav-logo {
+        font-size: 2.5rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    
+
+    .nav-logo {
+        font-size: 2.5rem;
+        display: flex;
+        justify-content: flex-start;
+        
+    }
+
+    .col-button {
+        display: flex;
+        align-items: baseline;
+    }
+
+
+}
+
+
+@media screen and (max-width: 500px) { 
+    .nav-logo {
+        font-size: 2.5rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+  
+}
+
+@media screen and (max-width: 400px) { 
+
+    .my-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-logo {
+        font-size:  32px;
+        
+    }
+
+
+    .hire-me-button {
+        font-size: 1rem !important;
+        padding: 0 !important;
+        height: 40px;
+        width: 80px;
+    }
+
+
+    
+
+    .col-button {
+        display: flex;
+        padding-top: 0;
+        align-items: baseline;
+    }
+
+}
+
+
+
