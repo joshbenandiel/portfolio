@@ -1,0 +1,48 @@
+.switch {
+  position: absolute;
+  height: 26px;
+  width: 45px;
+  background-color: #A1A2A3;
+  top:  10px;
+  right: 10px;
+  border-radius: 34px;
+  z-index: 3;
+  cursor: pointer;
+  position: fixed;
+}
+
+.switchOn {
+  position: absolute;
+  height: 26px;
+  width: 45px;
+  background-color: #FF0452;
+  top:  10px;
+  right: 10px;
+  border-radius: 34px;
+  z-index: 3;
+  cursor: pointer;
+  position: fixed;
+}
+.slider {
+  position: relative;
+}
+.round {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-color: #fff; 
+  top: 4px;
+  left: 4px;
+  border-radius: 50%;
+ 
+}
+
+.roundOn {
+position: absolute;
+height: 18px;
+width: 18px;
+ background-color: #fff; 
+ top: 4px;
+ right: 4px;
+ border-radius: 50%;
+}

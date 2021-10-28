@@ -24,6 +24,12 @@
     
 }
 
+.who-picture {
+    background: transparent;
+    height: 100%;
+    
+}
+
 
 
 .second-col-who {
@@ -37,6 +43,22 @@
     border-radius: 10px;
     padding: 0;
     margin-top: 200px;
+    overflow: hidden;
+    
+}
+
+.second-col-who-light {
+    
+    box-shadow: -7px 1px 26px -5px rgba(133,127,127,0.75);
+    height: 500px;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0;
+    margin-top: 200px;
+    overflow: hidden;
     
 }
 
@@ -44,6 +66,7 @@
 
     box-shadow: -1px -15px 95px -9px rgba(255,122,122,1);
 }
+
 
 @media screen and (max-width: 980px) {
     .who-content {
@@ -55,6 +78,14 @@
     }
 
     .second-col-who {
+        margin: auto;
+        margin-top: 100px;
+        height: 400px;
+        width: 400px;
+        margin-bottom: 100px;
+
+    }
+    .second-col-who-light {
         margin: auto;
         margin-top: 100px;
         height: 400px;

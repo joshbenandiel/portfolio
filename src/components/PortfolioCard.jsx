@@ -1,9 +1,9 @@
 import React from 'react'
 import "../styles/PortfolioCard.css"
 
-const PortfolioCard = () => {
+const PortfolioCard = (toggleOn) => {
   return (
-    <div className="portfolio-card">
+    <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
   
     </div>
   )
