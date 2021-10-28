@@ -4,7 +4,7 @@ import "../styles/Contact.css"
 import ContactInput from './ContactInput';
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faMapMarkerAlt, faEnvelope , faTimes} from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faMapMarkerAlt, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';

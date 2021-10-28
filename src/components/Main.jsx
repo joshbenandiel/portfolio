@@ -2,7 +2,7 @@ import "../styles/Main.css"
 import React from "react"
 import { Container, Row, Col } from "reactstrap";
 import  MainImage from "../images/main-img.png" 
-import ScrollToTop from "./ScrollToTop";
+
 
 
 const Main = ({toggleOn}) => {
