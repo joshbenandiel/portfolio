@@ -4,8 +4,6 @@ import "../styles/ContactInput.css"
 
 
 const ContactInput = ({contactInput , changeName, name, value , toggleOn}) => {
-
-  
   return (
     <div >
       <input 

@@ -1,11 +1,9 @@
 import "../styles/Navbar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from 'reactstrap';
-import ReactDOM from 'react-dom'
-import { faSignature, faCircle, faCross, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faSignature, faCircle, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { Container, Row, Col } from "reactstrap";
-import { useState, useEffect } from "react"
-import classnames from 'classnames';
+import { useState } from "react"
 import { Link } from "react-scroll";
 import Toggle from "./Toggle"
 
@@ -17,33 +15,7 @@ const Navbar = ({ handleToggle , toggleOn}) => {
     setMenuOpen(!menuOpen);
   }
 
-  const [width, setWidth] = useState(false);
 
-
-  function useWindowSize() {
-
-    const [windowSize, setWindowSize] = useState(window.innerWidth);
-
-    useEffect(() => {
-      function handleResize() {
-
-
-        if (window.innerWidth < 1000) {
-          setWidth(!width)
-        } else {
-          setWidth(false)
-        }
-
-      };
-      window.addEventListener("resize", handleResize);
-    }, []);
-    return windowSize;
-
-  }
-
-  const windowSize = useWindowSize();
-
-  console.log(windowSize);
 
   const handleLinkClick = () => {
     setMenuOpen(!menuOpen);
@@ -98,7 +70,7 @@ const Navbar = ({ handleToggle , toggleOn}) => {
                 (toggleOn ? "container-nav-on pt-5" : "container-nav pt-5")
               ]
             }
-          fluid={width ? true : false}>
+          fluid={false}>
           <Row>
 
             <Col className="my-navbar" lg="4" sm="6" xs="6" >

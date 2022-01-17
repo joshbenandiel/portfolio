@@ -20,15 +20,14 @@ const Main = ({toggleOn}) => {
                         <div className="logo-position">
                             <i className="logo fab fa-facebook-square"></i>
                             <i className="logo fab fa-instagram"></i>
-                            <i class="logo fab fa-linkedin"></i>
+                            <i className="logo fab fa-linkedin"></i>
                         </div>                
                    </div>
                 </Col>
                 <Col lg="6" sm="12">
                     <div className="picture-img ">
                         <div className={toggleOn ? "second-col-light" : "second-col"}>
-                            <img  className="main-image"src={MainImage} alt="formal-picture"></img>
-                            
+                          <img  className="main-image"src={MainImage} alt="formal-attire"></img>      
                         </div>
                     </div>
                 </Col>
