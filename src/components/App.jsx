@@ -15,8 +15,6 @@ const App = () => {
     console.log(toggleOn)
   }
   return (
-
-
         <div className={toggleOn ? "App-on" : "App"}>
           <Navbar
           toggleOn={toggleOn}

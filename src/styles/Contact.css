@@ -134,12 +134,3 @@
     }
 }
 
-@media screen and (max-width: 500px) {
-    .contact-input {
-        width: 26em !important;
-    }
-
-    .contact-textarea {
-        width: 26em;
-    }
-}
