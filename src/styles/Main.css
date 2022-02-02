@@ -75,37 +75,43 @@
     cursor: pointer;
 }
 
+.logo-position a {
+    text-decoration: none;
+}
+
 .second-col {
   background-image: linear-gradient(to right top, #313337, #2d2f33, #292b30, #25282c, #212429);
   box-shadow: -7px 1px 26px -5px rgb(133 127 127 / 75%);
-  height: 60%;
+  height: 30em;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   padding: 0;
-  margin: 0 10%;
+  margin: 10% 10%;
   position: relative;
   width: 100%;
 }
 
 .second-col-light {
     box-shadow: -7px 1px 26px -5px rgb(133 127 127 / 75%);
-    height: 60%;
+    height: 30em;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     padding: 0;
-    margin: 0 10%;
+    margin: 10% 10%;
     position: relative;
     width: 100%;
+    
 }
 
 .main-image {
     height: 130%;
-    margin-bottom: 8.5;
-    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+
     
 }
 
@@ -114,5 +120,3 @@
     margin-left: 5%;
 }
 
-.picture-img {
-}

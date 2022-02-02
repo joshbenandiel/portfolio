@@ -10,21 +10,27 @@ const Main = ({toggleOn}) => {
     <>
     <Container className="main" fluid={false}>
         <Row>
-            <Col lg="6" sm="12">
-              <div className="main-col pr-3">
+            <Col lg="6" sm='12'>
+              <div className="main-col pr-3 mb-5">
                   <p className="welcome">WELCOME TO MY WORLD</p>
                   <h1 className={toggleOn ? "name-on" : "name"}>Hi, I'm <span className="name-color">Joshua Jacinto</span></h1>
                   <h1 className={toggleOn ? "web-light" : "web"}>a Front-End Web Developer.</h1>
                   <p className="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                   <p className="find">FIND WITH ME</p>
                   <div className="logo-position">
-                      <i className="logo fab fa-facebook-square"></i>
-                      <i className="logo fab fa-instagram"></i>
-                      <i className="logo fab fa-linkedin"></i>
+                      <a href="https://facebook.com/joshbenandiel" target='_blank' rel="noopener noreferrer">
+                        <i className='logo bx bxl-facebook'></i>
+                      </a>
+                      <a href="https://instagram.com/joshbenandiel" target='_blank' rel="noopener noreferrer">
+                        <i className='logo bx bxl-instagram' ></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/joshua-jacinto-b357541b2/" target='_blank' rel="noopener noreferrer">
+                        <i className='logo bx bxl-linkedin' ></i>
+                      </a>
                   </div>                
               </div>
             </Col>
-            <Col className='d-flex align-items-center justify-content-center'lg="6" sm="12">
+            <Col className='d-flex align-items-center justify-content-center' lg="6" sm='12'>
               <div className={toggleOn ? "second-col-light" : "second-col"}>
                 <img  className="main-image"src={MainImage} alt="formal-attire"></img>      
               </div>

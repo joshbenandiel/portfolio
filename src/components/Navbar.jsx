@@ -5,16 +5,6 @@ import logo from '../images/logo.png'
 
 
 const Navbar = ({ handleToggle , toggleOn}) => {
-  
-  const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenuOpen = () => {
-    setMenuOpen(!menuOpen);
-  }
-
-
-  const handleLinkClick = () => {
-    setMenuOpen(!menuOpen);
-  }
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -43,7 +33,7 @@ const Navbar = ({ handleToggle , toggleOn}) => {
         </div>
         <div className="col-4 hire-me-button">
           <Link className='nav-link' to="contact" spy={true} smooth={true} duration={1000}>
-            <button className='btn btn-danger btn-lg'>Hire Me</button>
+            <button className='btn btn-danger btn-lg button-hire'>Hire Me</button>
           </Link>
         </div>
       </div>

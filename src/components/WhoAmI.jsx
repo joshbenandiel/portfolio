@@ -7,7 +7,7 @@ import MyPicture from "../images/main-img.png"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import pdf from '../pdf/Resume-2022.pdf'
+import pdf from '../pdf/Resume-2022-Latest.pdf'
 
 
 const WhoAmI = ({toggleOn}) => {

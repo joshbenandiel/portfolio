@@ -125,6 +125,10 @@
   justify-content: center;
 }
 
+.button-hire {
+  box-shadow: -1px -15px 95px -9px rgba(255,122,122,1);
+}
+
 .navbar-open-container {
   position: absolute;
   top: 0;
@@ -161,7 +165,13 @@
   padding: 30px;
   cursor: pointer;
   z-index: 1001;
+  width: 100%;
+  text-align: center;
 
+}
+
+.menu-link-open:hover {
+  background-color: #fff;
 }
 
 .menu-link-open.about {

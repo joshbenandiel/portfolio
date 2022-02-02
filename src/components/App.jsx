@@ -12,7 +12,6 @@ const App = () => {
 
   const handleToggle = () => {
     setToggleOn(!toggleOn);
-    console.log(toggleOn)
   }
   return (
         <div className={toggleOn ? "App-on" : "App"}>
