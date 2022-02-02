@@ -88,7 +88,7 @@
   align-items: center;
   border-radius: 10px;
   padding: 0;
-  margin: 10% 10%;
+  margin: 10% 10px;
   position: relative;
   width: 100%;
 }
@@ -101,18 +101,16 @@
     align-items: center;
     border-radius: 10px;
     padding: 0;
-    margin: 10% 10%;
+    margin: 10% 10px;
     position: relative;
     width: 100%;
     
 }
 
 .main-image {
-    height: 130%;
+    height: 120%;
     position: absolute;
     bottom: 0;
-
-    
 }
 
 .main-col {
