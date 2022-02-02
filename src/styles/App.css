@@ -1,9 +1,13 @@
 .App {
   position: relative;
   background-color: #212429;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .App-on {
   position: relative;
   background-color: #ECF0F3;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }

@@ -1,33 +1,24 @@
 .portfolio-card {
   background-image: linear-gradient(to right top, #313337, #2d2f33, #292b30, #25282c, #212429);
   box-shadow: -7px 1px 26px -5px rgba(133,127,127,0.75);
-  height: 350px;
+  height: 450px;
+  width: 100%;
   margin: 20px;
   border-radius: 12px;
 }
 
 .portfolio-card-light {
   box-shadow: -7px 1px 26px -5px rgba(133,127,127,0.75);
-  height: 350px;
+  height: 450px;
+  width: 100%;
   margin: 20px;
   border-radius: 12px;
+  
 }
 
-
-@media screen and (max-width: 500px ) {
-    .portfolio-card {
-      margin: 30px 60px;
-    }
-    .portfolio-card-light {
-      margin: 30px 60px;
-    }
-}
-
-@media screen and (max-width: 767px ) {
-  .portfolio-card {
-    margin: 30px 60px;
-  }
-  .portfolio-card-light {
-    margin: 30px 60px;
-  }
+.flip-button {
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  color: var(--color-);
 }

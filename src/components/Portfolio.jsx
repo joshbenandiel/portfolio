@@ -27,26 +27,9 @@ const Portfolio = ({toggleOn}) => {
         </div>
       </div>
       <div className="card-wrapper">
-        <Container>
-          <Row>
-            <Col lg="4" md="6" sm="12" data-aos="slide-right">
-              <PortfolioCard
-              toggleOn={toggleOn}
-              />
-            </Col>
-            <Col lg="4" md="6" sm="12" data-aos="slide-up">
-              <PortfolioCard
-              toggleOn={toggleOn}
-              />
-            </Col> 
-            <Col lg="4" md="6" sm="12" data-aos="slide-left">
-              <PortfolioCard
-              toggleOn={toggleOn}
-              />
-            </Col>         
-            
-          </Row>
-        </Container>
+        <PortfolioCard
+        toggleOn={toggleOn}
+        />
       </div>     
       
     </section>
