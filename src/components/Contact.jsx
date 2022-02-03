@@ -1,7 +1,7 @@
 import React from 'react';
 import TitleHeader from "./TitleHeader"
 import "../styles/Contact.css"
-import ContactInput from './ContactInput';
+import '../styles/ContactInput.css'
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faMapMarkerAlt, faEnvelope} from '@fortawesome/free-solid-svg-icons'
@@ -9,57 +9,71 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import emailjs from 'emailjs-com'
+import { useFormik } from 'formik'
 
 
+
+
+const onSubmit = (event, values) => {
+  emailjs.sendForm(
+  'service_z09q1kc', 
+  'template_9wowlzb', 
+  event.target,
+  'user_zMajlKQXAY3vDd0PLmMAu'
+  ).then(res => {
+    console.log(res)
+  }).catch(err => console.log(err))
+}
+const validate = (values) => {
+  let errors = {}
+  const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(!values.name){
+    errors.name = 'Name Required'
+  }
+  if(!values.email){
+    errors.email = 'Email Required'
+  } else if (!values.email.match(mailFormat)){
+    errors.email = '*Not Valid Email Address'
+  }
+  if(!values.phone){
+    errors.phone = 'Phone Number Required'
+  } else if(values.phone.length > 11 || values.phone.length < 11){
+    errors.phone = 'Invalid Phone Number'
+  }
+  if(!values.message){
+    errors.message = 'Message Required'
+  }
+  return errors
+}
 
 const Contact = ({toggleOn}) => {
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, [])
-
-  
-
   const [modal, setModal] = useState(false);
 
- 
-  
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone:"",
-    message: ""
-
-  })
-  const handleChange = (e) =>{
-    const value = e.target.value;
-    setFormData({
-      ...formData,
-      [e.target.name]: value
-    });
-
-    console.log(formData);
-  
-  }
-
   const toggle = () => {
-    
     setModal(!modal);
   }
-
   const clearInput = (e) => {
-    setModal(!modal);
-    setFormData({
-      name: "",
-      email: "",
-      phone:"",
-      message: ""
-
-    })
-    
+    setModal(!modal); 
   }
   
-  
+  const formik = useFormik({
+    initialValues: {
+      name:'',
+      email:'',
+      phone:'',
+      message: ''
+    },
+    onSubmit,
+    validate,
+  })
+
+  console.log(formik.errors)
+ 
   return (
     <div className="contact-wrap" id="contact">
       <TitleHeader
@@ -67,65 +81,72 @@ const Contact = ({toggleOn}) => {
         title="Have a Question?"
       />
       <h2 data-aos="fade-up">Contact Me Now</h2>
-
-      <Container>
-        <Row>
-          <Col md="6">
-            <div data-aos="fade-right">
-              <ContactInput
-                toggleOn={toggleOn}
-                name="name"
-                value={formData.name}
-                changeName={handleChange}
-                contactInput="Your Name"
-              />
-              <ContactInput
-                toggleOn={toggleOn}
-                name="email"
-                value={formData.email}        
-                changeName={handleChange}
-                contactInput="Your Email"
-              />
-              <ContactInput
-                toggleOn={toggleOn}
-                name="phone"   
-                value={formData.phone}  
-                changeName={handleChange}
-                contactInput="Your Phone"
-              />
+      <form onSubmit={formik.handleSubmit} className='d-flex justify-content-center flex-column'>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <input 
+                name='name'
+                value={formik.values.name}
+                onChange={formik.handleChange}
+                className={toggleOn ? "contact-input-light" : "contact-input"}
+                type="text" 
+                placeholder='Enter your name'>
+              </input>
+              <input 
+                name='email'
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                className={toggleOn ? "contact-input-light" : "contact-input"}
+                type="email" 
+                placeholder='Enter email address'>
+              </input>
+              <input 
+                name='phone'
+                value={formik.values.phone}
+                onChange={formik.handleChange}
+                className={toggleOn ? "contact-input-light" : "contact-input"}
+                type="text" 
+                placeholder='Enter phone number'
+                onKeyPress={(event) => {
+                  if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}>
+              </input>
             </div>
-          </Col>
-          <Col md="6">
-            <div data-aos="fade-left">
-              <textarea value={formData.message}  name="message" onChange={handleChange} className={toggleOn ? "contact-textarea-light" : "contact-textarea"} form="userform" placeholder="Your Message"></textarea>
+            <div className="col-md-6">
+              <textarea
+                name='message'
+                value={formik.values.message}
+                onChange={formik.handleChange}
+                type='text'
+                placeholder='Enter your message'
+                className={toggleOn ? "contact-textarea-light" : "contact-textarea"}>
+              </textarea>
             </div>
-          </Col>
-        </Row>
-      </Container>
-
-      <div>
-        <Button
-          onClick={toggle}
-          className="submit-form"
-          color="danger"
-          size="lg">Submit Form</Button>
-        <Modal isOpen={modal} toggle={toggle} odalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 700 }}>
-          <ModalHeader >
-          <h1>Email Sent!</h1>
-          </ModalHeader>
-          <ModalBody>
-            <div>
-              <p>Name: {formData.name}</p>
-              <p>Email: {formData.email}</p>
-              <p>Phone: {formData.phone}</p>
-              <p>Message: {formData.message}</p>
-            </div>
-          </ModalBody>
-          <ModalFooter>
-            <Button color="success" onClick={clearInput}>OK</Button>
-          </ModalFooter>
-        </Modal>
-      </div>
+          </div>
+        </div>
+        <button className='btn btn-danger btn-lg mt-3' type='submit'>Submit</button>
+      </form>
+    <div>
+      <Modal isOpen={modal} toggle={toggle} odalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 700 }}>
+        <ModalHeader >
+        <h1>Email Sent!</h1>
+        </ModalHeader>
+        <ModalBody>
+          <div>
+            <p>Name: {formik.values.name}</p>
+            <p>Email: {formik.values.email}</p>
+            <p>Phone: {formik.values.phone}</p>
+            <p>Message: {formik.values.message}</p>
+          </div>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="success" onClick={clearInput}>OK</Button>
+        </ModalFooter>
+      </Modal>
+    </div>
 
 
 

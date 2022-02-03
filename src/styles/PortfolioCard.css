@@ -52,7 +52,7 @@
 .heart-button {
   color: #fff;
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 20px;
   cursor: pointer;
 }
@@ -60,7 +60,7 @@
 .heart-button-active {
   color: var(--color-);
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 20px;
   cursor: pointer;
 }
