@@ -1,19 +1,23 @@
 .portfolio-card {
   background-image: linear-gradient(to right top, #313337, #2d2f33, #292b30, #25282c, #212429);
   box-shadow: -7px 1px 26px -5px rgba(133,127,127,0.75);
-  height: 450px;
-  width: 100%;
-  margin: 20px;
+  height: 500px;
+  width: auto;
   border-radius: 12px;
+  overflow: hidden;
+  margin: 15px;
+  margin-top: 30px;
 }
 
 .portfolio-card-light {
   box-shadow: -7px 1px 26px -5px rgba(133,127,127,0.75);
-  height: 450px;
-  width: 100%;
-  margin: 20px;
+  height: 500px;
+  width: auto;
   border-radius: 12px;
-  
+  overflow: hidden;
+  margin: 15px;
+  margin-top: 30px;
+  position: relative;
 }
 
 .flip-button {
@@ -21,4 +25,48 @@
   background-color: transparent;
   font-size: 30px;
   color: var(--color-);
+  transition: 500ms;
+}
+
+.flip-button-active {
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  color: var(--color-);
+  transform: rotate(360deg);
+  transition: 500ms;
+}
+
+.netflix-website {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ecommerce-website {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.heart-button {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.heart-button-active {
+  color: var(--color-);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.visit-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }

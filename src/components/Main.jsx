@@ -15,7 +15,7 @@ const Main = ({toggleOn}) => {
                   <p className="welcome">WELCOME TO MY WORLD</p>
                   <h1 className={toggleOn ? "name-on" : "name"}>Hi, I'm <span className="name-color">Joshua Jacinto</span></h1>
                   <h1 className={toggleOn ? "web-light" : "web"}>a Front-End Web Developer.</h1>
-                  <p className="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                  <p className="main-paragraph">Bachelor of Science in Computer Engineering</p>
                   <p className="find">FIND WITH ME</p>
                   <div className="logo-position">
                       <a href="https://facebook.com/joshbenandiel" target='_blank' rel="noopener noreferrer">

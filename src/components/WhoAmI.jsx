@@ -31,8 +31,7 @@ const WhoAmI = ({toggleOn}) => {
                 title="Who I am?"
                 />
               </div>      
-              <p className="main-paragraph" data-aos="fade-left" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <p className="main-paragraph mb-5" data-aos="fade-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p className="main-paragraph" data-aos="fade-left" >I am passionate on learning web development. I work hard. I care about writing clean code. I'm currently looking for the opportunity to work in an environment that will help me progress my skill being a front end developer and also to be able to grow into full stack role.</p>
               <div className="w-100 text-center">
                 <a href={pdf} download='Jacinto-Joshua-Resume'>
                   <Button className="download-pdf" color="danger" size="lg" data-aos="fade-up">Download PDF</Button>

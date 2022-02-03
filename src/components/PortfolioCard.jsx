@@ -8,26 +8,38 @@ const PortfolioCard = (toggleOn) => {
 
   const [isFlipped, setIsFlipped] = useState(false)
 
+  console.log(isFlipped)
+
   const handleClick = () => {
     setIsFlipped(!isFlipped)
   }
+
+  const [heartIsClick , setHeartIsClick] = useState(false)
+  const [heartIsClick1 , setHeartIsClick1] = useState(false)
   return (
-    <>
-    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal" flipSpeedFrontToBack='1' flipSpeedFrontToFront='1'>
-      <div>
-        <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
-            <h1 className='text-white'>front</h1>
+    <div className='d-flex flex-column justify-content-center align-items-center'>
+      <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal" flipSpeedFrontToBack='1' flipSpeedFrontToFront='1'>
+        <div className='d-flex justify-content-center align-items-center'>
+          <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
+              <img className='netflix-website' src={netflix} alt="netflix-website" />
+              <i onClick={() => setHeartIsClick(!heartIsClick)} className={`bx bxs-heart bx-lg ${heartIsClick ? `heart-button-active` : `heart-button`}`}></i>
+              <a href="https://main.d31g18hqzwqtzt.amplifyapp.com/" target='_blank' rel="noopener noreferrer">
+               <button className='btn btn-outline-danger visit-button'>Visit Website</button>
+              </a>
+          </div>
         </div>
-        <button className='flip-button' onClick={handleClick}><i class="fas fa-sync-alt"></i></button>
-      </div>
-      <div>
-        <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
-            <h1 className='text-white'>back</h1>
+        <div className='d-flex justify-content-center align-items-center'>
+          <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
+           <img className='ecommerce-website' src={ecommerce} alt="ecommerce-website" />
+           <i onClick={() => setHeartIsClick1(!heartIsClick1)} className={`bx bxs-heart bx-lg ${heartIsClick1 ? `heart-button-active` : `heart-button`}`}></i>
+           <a href="https://master.d2e9splpji5fdj.amplifyapp.com/" target='_blank' rel="noopener noreferrer">
+            <button  className='btn btn-outline-danger visit-button'>Visit Website</button>
+           </a>
+          </div>
         </div>
-        <button className='flip-button' onClick={handleClick}><i class="fas fa-sync-alt"></i></button>
-      </div>
-    </ReactCardFlip>
-    </>
+      </ReactCardFlip>
+      <button className={isFlipped ? 'flip-button-active' :'flip-button'} onClick={handleClick}><i class="fas fa-sync-alt"></i></button>
+    </div>
   )
 }
 

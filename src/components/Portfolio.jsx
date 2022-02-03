@@ -3,7 +3,6 @@ import TitleHeader from "./TitleHeader"
 import "../styles/TitleHeader.css"
 import PortfolioCard from "./PortfolioCard"
 import "../styles/Portfolio.css"
-import { Container, Row, Col } from "reactstrap";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
