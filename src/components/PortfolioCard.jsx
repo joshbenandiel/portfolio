@@ -8,8 +8,6 @@ const PortfolioCard = (toggleOn) => {
 
   const [isFlipped, setIsFlipped] = useState(false)
 
-  console.log(isFlipped)
-
   const handleClick = () => {
     setIsFlipped(!isFlipped)
   }
@@ -38,7 +36,7 @@ const PortfolioCard = (toggleOn) => {
           </div>
         </div>
       </ReactCardFlip>
-      <button className={isFlipped ? 'flip-button-active' :'flip-button'} onClick={handleClick}><i class="fas fa-sync-alt"></i></button>
+      <button className={isFlipped ? 'flip-button-active' :'flip-button'} onClick={handleClick}><i className="fas fa-sync-alt"></i></button>
     </div>
   )
 }

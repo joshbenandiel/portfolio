@@ -15,15 +15,16 @@ import { useFormik } from 'formik'
 
 
 
-const onSubmit = (event, values) => {
+const onSubmit = () => {
   emailjs.sendForm(
   'service_z09q1kc', 
   'template_9wowlzb', 
-  event.target,
+  'form-container',
   'user_zMajlKQXAY3vDd0PLmMAu'
   ).then(res => {
     console.log(res)
   }).catch(err => console.log(err))
+  console.log('josh')
 }
 const validate = (values) => {
   let errors = {}
@@ -72,7 +73,6 @@ const Contact = ({toggleOn}) => {
     validate,
   })
 
-  console.log(formik.errors)
  
   return (
     <div className="contact-wrap" id="contact">
@@ -81,7 +81,7 @@ const Contact = ({toggleOn}) => {
         title="Have a Question?"
       />
       <h2 data-aos="fade-up">Contact Me Now</h2>
-      <form onSubmit={formik.handleSubmit} className='d-flex justify-content-center flex-column'>
+      <form onSubmit={formik.handleSubmit} id='form-container'className='d-flex justify-content-center flex-column'>
         <div className="container">
           <div className="row">
             <div className="col-md-6">
@@ -147,32 +147,28 @@ const Contact = ({toggleOn}) => {
         </ModalFooter>
       </Modal>
     </div>
-
-
-
-
-      <Container className="info-wrapper">
-        <Row>
-          <Col lg="4" md="4">
-            <div className="phone-wrapper" data-aos="slide-up" data-aos-delay="50">
-              <FontAwesomeIcon className="info-phone" size="2x" icon={faPhone} />
-              <h4>+639154752974</h4>
-            </div>
-          </Col>
-          <Col lg="4" md="4">
-            <div className="map-wrapper" data-aos="slide-up" data-aos-delay="200">
-              <FontAwesomeIcon className="info-map" size="2x" icon={faMapMarkerAlt} />
-              <h4>Blk 7 Lot 5 Villa Carpio Subd. Parian Calamba City Laguna</h4>
-            </div>
-          </Col>
-          <Col lg="4" md="4">
-            <div className="email-wrapper" data-aos="slide-up" data-aos-delay="400">
-              <FontAwesomeIcon className="info-envelope" size="2x" icon={faEnvelope} />
-              <h4>joshjacinto22@gmail.com</h4>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+    <Container className="info-wrapper">
+      <Row>
+        <Col lg="4" md="4">
+          <div className="phone-wrapper" data-aos="slide-up" data-aos-delay="50">
+            <FontAwesomeIcon className="info-phone" size="2x" icon={faPhone} />
+            <h4>+639154752974</h4>
+          </div>
+        </Col>
+        <Col lg="4" md="4">
+          <div className="map-wrapper" data-aos="slide-up" data-aos-delay="200">
+            <FontAwesomeIcon className="info-map" size="2x" icon={faMapMarkerAlt} />
+            <h4>Blk 7 Lot 5 Villa Carpio Subd. Parian Calamba City Laguna</h4>
+          </div>
+        </Col>
+        <Col lg="4" md="4">
+          <div className="email-wrapper" data-aos="slide-up" data-aos-delay="400">
+            <FontAwesomeIcon className="info-envelope" size="2x" icon={faEnvelope} />
+            <h4>joshjacinto22@gmail.com</h4>
+          </div>
+        </Col>
+      </Row>
+    </Container>
     </div>
   )
 }
