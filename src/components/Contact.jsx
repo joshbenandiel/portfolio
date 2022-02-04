@@ -32,10 +32,10 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
       )
       setIsLoading(false)
       setModal(true)
+      formik.resetForm()
     } catch(err){
       console.log(err)
-    }
-    
+    } 
   }
   const validate = (values) => {
     let errors = {}
@@ -96,9 +96,7 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
               <div className='position-relative'>
                 <input 
                   name='name'
-                  value={formik.values.name}
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
+                  {... formik.getFieldProps('name')}
                   className={toggleOn ? `contact-input-light ${formik.errors.name && formik.touched.name && `red`}` : `contact-input ${formik.errors.name && formik.touched.name && `red`}`}
                   type="text" 
                   placeholder='Enter your name'
@@ -117,9 +115,7 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
               <div className='position-relative'>
                 <input 
                   name='email'
-                  value={formik.values.email}
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
+                  {... formik.getFieldProps('email')}
                   className={toggleOn ? `contact-input-light ${formik.errors.email && formik.touched.email && `red`}` : `contact-input ${formik.errors.email && formik.touched.email && `red`}`}
                   type="email" 
                   placeholder='Enter email address'>
@@ -137,9 +133,7 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
               <div className='position-relative'>
                 <input 
                   name='phone'
-                  value={formik.values.phone}
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
+                  {... formik.getFieldProps('phone')}
                   className={toggleOn ? `contact-input-light ${formik.touched.phone && formik.errors.phone && `red`}` : `contact-input ${formik.touched.phone && formik.errors.phone && `red`}`}
                   type="text" 
                   placeholder='Enter phone number'
@@ -163,9 +157,7 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
             <div className="col-md-6 position-relative" data-aos="fade-left">
               <textarea
                 name='message'
-                value={formik.values.message}
-                onBlur={formik.handleBlur}
-                onChange={formik.handleChange}
+                {... formik.getFieldProps('message')}
                 type='text'
                 placeholder='Enter your message'
                 className={toggleOn ? `contact-textarea-light ${formik.touched.message && formik.errors.message && `red`}` : `contact-textarea ${formik.touched.message && formik.errors.message && `red`}`}
