@@ -81,8 +81,6 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
     onSubmit,
     validate,
   })
-
-  console.log(formik.values)
   return (
     <div className="contact-wrap position-relative" id="contact">
       <TitleHeader
