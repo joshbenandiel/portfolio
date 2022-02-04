@@ -13,8 +13,10 @@ const App = () => {
   const handleToggle = () => {
     setToggleOn(!toggleOn);
   }
+
+  const [isLoading, setIsLoading] = useState(false)
   return (
-        <div className={toggleOn ? "App-on" : "App"}>
+        <div className={toggleOn ? "App-on position-relative" : "App position-relative"}>
           <Navbar
           toggleOn={toggleOn}
           handleToggle={handleToggle}
@@ -29,9 +31,15 @@ const App = () => {
           toggleOn={toggleOn}
           />
           <Contact
+          setIsLoading={setIsLoading}
+          isLoading={isLoading}
           toggleOn={toggleOn}
           />
           <ScrollToTop/>
+          {isLoading && (
+            <div className='loading'>
+            </div>
+          )}
         </div>
       
   );

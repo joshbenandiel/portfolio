@@ -134,3 +134,55 @@
     }
 }
 
+.loading {
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ top: 0;
+ background-color: rgb(0,0,0,0.6);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.circular-progress {
+  position: absolute;
+  top: 30%;
+}
+
+.contact-input.red {
+  border: 1px solid red;
+}
+
+.contact-input-light.red {
+  border: 1px solid red;
+}
+
+.contact-textarea.red {
+  border: 1px solid red;
+}
+
+.contact-textarea-light.red {
+  border: 1px solid red;
+}
+
+.error-icon {
+  color: red;
+  cursor: pointer;
+  position: absolute;
+  right: 3%;
+  top: 40%;
+}
+
+.error-icon-text {
+  position: absolute;
+  color: red;
+  right: 5%;
+  top: 10%;
+  cursor: pointer;
+}
+
+.form-container {
+  width: 1000px;
+}
+
