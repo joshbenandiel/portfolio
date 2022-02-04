@@ -22,7 +22,7 @@ const PortfolioCard = (toggleOn) => {
               <img className='netflix-website' src={netflixImage} alt="netflix-website" />
               <i onClick={() => setHeartIsClick(!heartIsClick)} className={`bx bxs-heart bx-lg ${heartIsClick ? `heart-button-active` : `heart-button`}`}></i>
               <a href="https://main.d31g18hqzwqtzt.amplifyapp.com/" target='_blank' rel="noopener noreferrer">
-               <button className='btn btn-outline-danger visit-button'>Visit Website</button>
+               <button className='btn btn-danger visit-button'>Visit Website</button>
               </a>
           </div>
         </div>
@@ -31,7 +31,7 @@ const PortfolioCard = (toggleOn) => {
            <img className='ecommerce-website' src={ecomImage} alt="ecommerce-website" />
            <i onClick={() => setHeartIsClick1(!heartIsClick1)} className={`bx bxs-heart bx-lg ${heartIsClick1 ? `heart-button-active` : `heart-button`}`}></i>
            <a href="https://master.d2e9splpji5fdj.amplifyapp.com/" target='_blank' rel="noopener noreferrer">
-            <button  className='btn btn-outline-danger visit-button'>Visit Website</button>
+            <button  className='btn btn-danger visit-button'>Visit Website</button>
            </a>
           </div>
         </div>

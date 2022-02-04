@@ -32,7 +32,6 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
       )
       setIsLoading(false)
       setModal(true)
-      formik.resetForm()
     } catch(err){
       console.log(err)
     } 
@@ -67,8 +66,9 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
   const toggle = () => {
     setModal(!modal);
   }
-  const clearInput = (e) => {
-    setModal(!modal); 
+  const clearInput = () => {
+    formik.resetForm()
+    setModal(!modal);
   }
 
   const formik = useFormik({
@@ -82,6 +82,7 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
     validate,
   })
 
+  console.log(formik.values)
   return (
     <div className="contact-wrap position-relative" id="contact">
       <TitleHeader
