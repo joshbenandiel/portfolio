@@ -55,19 +55,41 @@
     margin-top: 8em;
 }
 
+.logo__container {
+  background: rgb(33,36,41);
+  background: linear-gradient(90deg, rgba(33,36,41,1) 0%, rgba(33,36,41,1) 16%, rgba(33,36,41,1) 20%, rgba(33,36,41,1) 36%, rgba(88,89,91,1) 94%);
+  box-shadow: -7px 1px 26px -5px rgba(133,127,127,0.75);
+  border-radius: 20%;
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
 .logo {
-    background: rgb(33,36,41);
-    background: linear-gradient(90deg, rgba(33,36,41,1) 0%, rgba(33,36,41,1) 16%, rgba(33,36,41,1) 20%, rgba(33,36,41,1) 36%, rgba(88,89,91,1) 94%);
+  color: #fff;
+}
+.logo-light {
+  color: #262A2D;
+}
+
+
+.logo:hover {
+    transform: scale(1.4);
+    transition: 300ms;
+}
+
+
+.logo-theme-light {
+    background-color: #fff;
     box-shadow: -7px 1px 26px -5px rgba(133,127,127,0.75);
     border-radius: 20%;
     height: 40px;
     width: 40px;
-    color: #fff;
     font-size: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
-
 }
 
 

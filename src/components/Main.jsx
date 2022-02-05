@@ -18,15 +18,21 @@ const Main = ({toggleOn}) => {
                   <p className="main-paragraph">Bachelor of Science in Computer Engineering</p>
                   <p className="find">FIND WITH ME</p>
                   <div className="logo-position">
+                    <div className={toggleOn ? 'logo-theme-light' : 'logo__container'}>
                       <a href="https://facebook.com/joshbenandiel" target='_blank' rel="noopener noreferrer">
-                        <i className='logo bx bxl-facebook'></i>
+                        <i className={`${toggleOn ? `logo-light`: `logo`} bx bxl-facebook`}></i>
                       </a>
+                    </div>
+                    <div className={toggleOn ? 'logo-theme-light' : 'logo__container'}>
                       <a href="https://instagram.com/joshbenandiel" target='_blank' rel="noopener noreferrer">
-                        <i className='logo bx bxl-instagram' ></i>
+                        <i className={`${toggleOn ? `logo-light`: `logo`} bx bxl-instagram`}></i>
                       </a>
+                    </div>
+                    <div className={toggleOn ? 'logo-theme-light' : 'logo__container'}>
                       <a href="https://www.linkedin.com/in/joshua-jacinto-b357541b2/" target='_blank' rel="noopener noreferrer">
-                        <i className='logo bx bxl-linkedin' ></i>
+                        <i className={`${toggleOn ? `logo-light`: `logo`} bx bxl-linkedin`}></i>
                       </a>
+                    </div>
                   </div>                
               </div>
             </Col>
