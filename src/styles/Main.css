@@ -80,6 +80,11 @@
     transition: 300ms;
 }
 
+.logo-light:hover {
+  transform: scale(1.4);
+  transition: 300ms;
+}
+
 
 .logo-theme-light {
     background-color: #fff;
