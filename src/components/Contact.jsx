@@ -174,7 +174,9 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
             </div>
           </div>
         </div>
-        <button className='btn btn-danger btn-lg mt-3' type='submit'>Submit</button>
+        <div className='w-100 d-flex justify-content-center'>
+         <button className='btn btn-danger btn-lg mt-3' type='submit'>Submit</button>
+        </div>
       </form>
     <div>
       <Modal isOpen={modal} toggle={toggle} odalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 700 }}>

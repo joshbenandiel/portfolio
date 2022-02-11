@@ -63,6 +63,27 @@
   bottom: 15px;
   left: 20px;
   cursor: pointer;
+  animation: popup 0.8s infinite;
+  visibility: visible;
+}
+
+.heart-button-active::after {
+  content: '';
+  color: var(--color-);
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  cursor: pointer;
+}
+
+@keyframes popup {
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+
 }
 
 .visit-button {
