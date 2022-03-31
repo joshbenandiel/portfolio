@@ -1,8 +1,8 @@
 .portfolio-card {
   background-image: linear-gradient(to right top, #313337, #2d2f33, #292b30, #25282c, #212429);
   box-shadow: -7px 1px 26px -5px rgba(133,127,127,0.75);
-  height: 500px;
-  width: auto;
+  height: 350px;
+  width: 350px;
   border-radius: 12px;
   overflow: hidden;
   margin: 15px;
@@ -11,30 +11,13 @@
 
 .portfolio-card-light {
   box-shadow: -7px 1px 26px -5px rgba(133,127,127,0.75);
-  height: 500px;
-  width: auto;
+  height: 350px;
+  width: 350px;
   border-radius: 12px;
   overflow: hidden;
   margin: 15px;
   margin-top: 30px;
   position: relative;
-}
-
-.flip-button {
-  border: none;
-  background-color: transparent;
-  font-size: 30px;
-  color: var(--color-);
-  transition: 500ms;
-}
-
-.flip-button-active {
-  border: none;
-  background-color: transparent;
-  font-size: 30px;
-  color: var(--color-);
-  transform: rotate(360deg);
-  transition: 500ms;
 }
 
 .netflix-website {

@@ -2,10 +2,32 @@
   display: flex;  
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  flex-direction: column;
   
 }
 .port-title {
   margin-top: 132px;
 }
 
+.card-container {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  margin: 2px;
+}
+
+.portfolio-button-section {
+  display: flex;
+  gap: 20px;
+}
+
+.visit-page-button {
+  width: 100%;
+  display: flex;
+  margin: 20px;
+}
+.portfolio-container {
+  display: flex;
+  /* flex-wrap: wrap;
+  justify-content: center; */
+}
