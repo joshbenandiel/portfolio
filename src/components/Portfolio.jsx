@@ -1,7 +1,6 @@
 import React from 'react'
 import TitleHeader from "./TitleHeader"
 import "../styles/TitleHeader.css"
-import PortfolioCard from "./PortfolioCard"
 import "../styles/Portfolio.css"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -54,41 +53,42 @@ const Portfolio = ({toggleOn}) => {
         </div>
       </div>
       <div className="card-wrapper">
-        <div className='portfolio-button-section'>
+        <div className='portfolio-button-section' data-aos="slide-right">
           <button className='btn btn-danger' type="button" data-filter="all">All</button>
           <button className='btn btn-danger' type="button" data-filter=".category-b">Ecommerce</button>
           <button className='btn btn-danger' type="button" data-filter=".category-a">User</button>
         </div>
-
-        <div className="portfolio-container mt-5">
-          <div className="mix category-a" data-order="1">
-            <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
-                <img className='netflix-website' src={netflix} alt="netflix-website" />
-                <div className='visit-page-button'>
-                  <a href="https://main.d31g18hqzwqtzt.amplifyapp.com/" target='_blank' rel="noopener noreferrer">     
-                    <button className='btn btn-outline-danger' type="button">Visit Page</button>
-                  </a>
-                </div>
+        <div className='portfolio-wrapper'>
+          <div className="portfolio-container mt-5" data-aos="slide-left">
+            <div className="mix category-a" data-order="1">
+              <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
+                  <img className='netflix-website' src={netflix} alt="netflix-website" />
+                  <div className='visit-page-button'>
+                    <a href="https://main.d31g18hqzwqtzt.amplifyapp.com/" target='_blank' rel="noopener noreferrer">     
+                      <button className='btn btn-outline-danger' type="button">Visit Page</button>
+                    </a>
+                  </div>
+              </div>
             </div>
-          </div>
-          <div className="mix category-b" data-order="2">
-            <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
-                <img className='netflix-website' src={ecommerce} alt="netflix-website" />
-                <div className='visit-page-button'>
-                  <a href="https://master.d2e9splpji5fdj.amplifyapp.com/" target='_blank' rel="noopener noreferrer">
-                    <button className='btn btn-outline-danger' type="button">Visit Page</button>
-                  </a>
-                </div>
+            <div className="mix category-b" data-order="2">
+              <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
+                  <img className='netflix-website' src={ecommerce} alt="netflix-website" />
+                  <div className='visit-page-button'>
+                    <a href="https://master.d2e9splpji5fdj.amplifyapp.com/" target='_blank' rel="noopener noreferrer">
+                      <button className='btn btn-outline-danger' type="button">Visit Page</button>
+                    </a>
+                  </div>
+              </div>
             </div>
-          </div>
-          <div className="mix category-b" data-order="3">
-            <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
-                <img className='netflix-website' src={emart} alt="netflix-website" />
-                <div className='visit-page-button'>
-                  <a href="https://master.d3lks2nb203l3p.amplifyapp.com/" target='_blank' rel="noopener noreferrer">
-                    <button className='btn btn-outline-danger' type="button">Visit Page</button>
-                  </a>
-                </div>
+            <div className="mix category-b" data-order="3">
+              <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
+                  <img className='netflix-website' src={emart} alt="netflix-website" />
+                  <div className='visit-page-button'>
+                    <a href="https://master.d3lks2nb203l3p.amplifyapp.com/" target='_blank' rel="noopener noreferrer">
+                      <button className='btn btn-outline-danger' type="button">Visit Page</button>
+                    </a>
+                  </div>
+              </div>
             </div>
           </div>
         </div>

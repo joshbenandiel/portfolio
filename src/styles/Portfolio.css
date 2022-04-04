@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   
 }
 .port-title {
@@ -28,6 +29,16 @@
 }
 .portfolio-container {
   display: flex;
-  /* flex-wrap: wrap;
-  justify-content: center; */
+  justify-content: center;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  
+ 
 }
+
+.portfolio-wrapper {
+  width: 100%;
+
+}
+
+
