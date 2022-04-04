@@ -10,7 +10,7 @@ import '../styles/PortfolioCard.css'
 import mixitup from 'mixitup'
 import netflix from '../images/netflix.png'
 import ecommerce from '../images/ecommerce.png'
-import emart from '../images/emart.png'
+import ecom from '../images/emart.png'
 
 
 
@@ -83,7 +83,7 @@ const Portfolio = ({toggleOn}) => {
           </div>
           <div className="mix category-b" data-order="3">
             <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
-                <img className='netflix-website' src={emart} alt="netflix-website" />
+                <img className='netflix-website' src={ecom} alt="netflix-website" />
                 <div className='visit-page-button'>
                   <a href="https://master.d3lks2nb203l3p.amplifyapp.com/" target='_blank' rel="noopener noreferrer">
                     <button className='btn btn-outline-danger' type="button">Visit Page</button>
