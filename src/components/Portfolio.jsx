@@ -9,7 +9,7 @@ import '../styles/PortfolioCard.css'
 import mixitup from 'mixitup'
 import netflix from '../images/netflix.png'
 import ecommerce from '../images/ecommerce.png'
-import emart from '../images/emart.PNG'
+import emart from '../images/emart.jpg'
 
 
 
