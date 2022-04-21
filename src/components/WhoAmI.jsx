@@ -7,7 +7,8 @@ import MyPicture from "../images/main-img.png"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import resume from '../pdf/Jacinto_Joshua.pdf'
+import newResume from '../pdf/Jacinto_Joshua.pdf'
+
 
 
 const WhoAmI = ({toggleOn}) => {
@@ -33,7 +34,7 @@ const WhoAmI = ({toggleOn}) => {
               </div>      
               <p className="main-paragraph" data-aos="fade-left" >I am passionate on learning web development. I work hard. I care about writing clean code. I'm currently looking for the opportunity to work in an environment that will help me progress my skill being a front end developer and also to be able to grow into full stack role.</p>
               <div className="w-100 text-center">
-                <a href={resume} download>
+                <a href={newResume} download>
                   <Button className="download-pdf" color="danger" size="lg" data-aos="fade-up">Download PDF</Button>
                 </a>
               </div>
