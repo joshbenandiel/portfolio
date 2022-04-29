@@ -38,7 +38,7 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
   }
   const validate = (values) => {
     let errors = {}
-    const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if(!values.name){
       errors.name = 'Name Required'
     }
