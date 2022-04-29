@@ -64,7 +64,7 @@ const Portfolio = ({toggleOn}) => {
               <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
                   <img className='netflix-website' src={netflix} alt="netflix-website" />
                   <div className='visit-page-button'>
-                    <a href="https://main.d31g18hqzwqtzt.amplifyapp.com/" target='_blank' rel="noopener noreferrer">     
+                    <a href="https://netflixapi.netlify.app/" target='_blank' rel="noopener noreferrer">     
                       <button className='btn btn-outline-danger' type="button">Visit Page</button>
                     </a>
                   </div>
@@ -74,7 +74,7 @@ const Portfolio = ({toggleOn}) => {
               <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
                   <img className='netflix-website' src={ecommerce} alt="netflix-website" />
                   <div className='visit-page-button'>
-                    <a href="https://master.d2e9splpji5fdj.amplifyapp.com/" target='_blank' rel="noopener noreferrer">
+                    <a href="https://applestoreecom.netlify.app/" target='_blank' rel="noopener noreferrer">
                       <button className='btn btn-outline-danger' type="button">Visit Page</button>
                     </a>
                   </div>
@@ -84,7 +84,7 @@ const Portfolio = ({toggleOn}) => {
               <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
                   <img className='netflix-website' src={emart} alt="netflix-website" />
                   <div className='visit-page-button'>
-                    <a href="https://master.d3lks2nb203l3p.amplifyapp.com/" target='_blank' rel="noopener noreferrer">
+                    <a href="https://ecommerceapi.netlify.app/" target='_blank' rel="noopener noreferrer">
                       <button className='btn btn-outline-danger' type="button">Visit Page</button>
                     </a>
                   </div>
