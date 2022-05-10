@@ -4,7 +4,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
-const TitleHeader = ({ title, toggleOn }) => {
+interface Props {
+  title: string
+  toggleOn: boolean
+}
+
+
+const TitleHeader: React.FC<Props> = ({ title, toggleOn }) => {
 
 
   useEffect(() => {

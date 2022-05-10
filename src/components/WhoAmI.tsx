@@ -8,9 +8,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
+interface Props {
+  toggleOn: boolean
+}
 
-
-const WhoAmI = ({toggleOn}) => {
+const WhoAmI: React.FC<Props> = ({toggleOn}) => {
 
     useEffect(() => {
         AOS.init({duration: 1000});

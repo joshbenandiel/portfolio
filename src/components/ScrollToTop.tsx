@@ -5,6 +5,7 @@ import "../styles/ScrollToTop.css"
 import { useWindowScroll } from "react-use"
 import { useState , useEffect} from "react"
 import {animateScroll as scroll} from "react-scroll"
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 const ScrollToTop = () => {
 
@@ -32,7 +33,7 @@ const ScrollToTop = () => {
           scroll.scrollToTop(1000)
         }}
         className="scroll-to-top">
-          <FontAwesomeIcon className="chevron" size="2x" icon={faChevronUp} />
+          <FontAwesomeIcon className="chevron" size="2x" icon={faChevronUp as IconProp} />
         </div>
       </div>
     )}
