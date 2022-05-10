@@ -12,32 +12,32 @@ import { useState } from "react"
 
 const App: React.FC<any> = () => {
 
-  const [toggleOn, setToggleOn] = useState<boolean>(false);
+  const [toggleOn, setToggleOn] = useState<any | null>(false);
 
   const handleToggle = () => {
     setToggleOn(!toggleOn);
   }
 
-  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [isLoading, setIsLoading] = useState<any | null>(false)
   return (
         <div className={toggleOn ? "App-on position-relative" : "App position-relative"}>
           <Navbar
-          toggleOn={toggleOn}
-          handleToggle={handleToggle}
+            toggleOn={toggleOn}
+            handleToggle={handleToggle}
           />
           <Main
-          toggleOn={toggleOn}
+            toggleOn={toggleOn}
           /> 
           <Who
-          toggleOn={toggleOn}
+           toggleOn={toggleOn}
           />
           <Portfolio
-          toggleOn={toggleOn}
+            toggleOn={toggleOn}
           />
           <Contact
-          setIsLoading={setIsLoading}
-          isLoading={isLoading}
-          toggleOn={toggleOn}
+            setIsLoading={setIsLoading}
+            isLoading={isLoading}
+            toggleOn={toggleOn}
           />
           <ScrollToTop/>
           {isLoading && (

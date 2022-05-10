@@ -4,7 +4,12 @@ import { Link } from "react-scroll";
 import logo from '../images/logo.png'
 
 
-const Navbar = ({ handleToggle , toggleOn}) => {
+interface Props {
+  handleToggle: () => any
+  toggleOn: boolean
+}
+
+const Navbar: React.FC<any> = ({ handleToggle , toggleOn}: Props) => {
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -44,7 +49,7 @@ const Navbar = ({ handleToggle , toggleOn}) => {
           </div>
         </div>
       </button>
-      <button onClick={handleToggle} className='theme__button'>
+      <button onClick={() => handleToggle()} className='theme__button'>
         <i className={`bx bx-moon bx-md ${toggleOn ? `moon__button__open` : 'moon__button'}`}></i>
         <i className={`bx bx-sun bx-md ${toggleOn ? `sun__button__open` : 'sun__button'}`}></i>
       </button>

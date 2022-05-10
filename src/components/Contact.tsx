@@ -13,11 +13,23 @@ import emailjs from 'emailjs-com'
 import { useFormik } from 'formik'
 import CircularProgress from '@mui/material/CircularProgress';
 import Tooltip from '@mui/material/Tooltip';
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 
+interface Props {
+  toggleOn: boolean
+  setIsLoading: (loading: boolean) => void
+  isLoading: boolean
+}
 
+interface ValidationInterface {
+  name: string
+  email: any
+  phone: any
+  message: string | number
+}
 
-const Contact: React.FC<any>= ({toggleOn, setIsLoading, isLoading}) => {
+const Contact: React.FC<Props>= ({toggleOn, setIsLoading, isLoading}: Props) => {
 
   const ref = useRef<any>()
 
@@ -39,7 +51,7 @@ const Contact: React.FC<any>= ({toggleOn, setIsLoading, isLoading}) => {
       console.log(err)
     } 
   }
-  const validate = (values: any) => {
+  const validate = (values: ValidationInterface) => {
     let errors: any = {}
     const mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if(!values.name){
@@ -199,19 +211,19 @@ const Contact: React.FC<any>= ({toggleOn, setIsLoading, isLoading}) => {
       <Row>
         <Col lg="4" md="4">
           <div className="phone-wrapper" data-aos="slide-up" data-aos-delay="50">
-            <FontAwesomeIcon className="info-phone" size="2x" icon={faPhone} />
+            <FontAwesomeIcon className="info-phone" size="2x" icon={faPhone as IconProp} />
             <h4>+639154752974</h4>
           </div>
         </Col>
         <Col lg="4" md="4">
           <div className="map-wrapper" data-aos="slide-up" data-aos-delay="200">
-            <FontAwesomeIcon className="info-map" size="2x" icon={faMapMarkerAlt} />
+            <FontAwesomeIcon className="info-map" size="2x" icon={faMapMarkerAlt as IconProp} />
             <h4>Blk 7 Lot 5 Villa Carpio Subd. Parian Calamba City Laguna</h4>
           </div>
         </Col>
         <Col lg="4" md="4">
           <div className="email-wrapper" data-aos="slide-up" data-aos-delay="400">
-            <FontAwesomeIcon className="info-envelope" size="2x" icon={faEnvelope} />
+            <FontAwesomeIcon className="info-envelope" size="2x" icon={faEnvelope as IconProp} />
             <h4>joshjacinto22@gmail.com</h4>
           </div>
         </Col>

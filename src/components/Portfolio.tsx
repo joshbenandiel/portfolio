@@ -6,26 +6,23 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import '../styles/PortfolioCard.css'
-import mixitup from 'mixitup'
 import netflix from '../images/netflix.png'
 import ecommerce from '../images/ecommerce.png'
 import emart from '../images/emart.jpg'
-import facebook from '../images/facebook.PNG'
+import facebook from '../images/facebook.png'
 
+const mixitup = require('mixitup');
 
+interface Props {
+  toggleOn: boolean
+}
 
-const Portfolio = ({toggleOn}) => {
+const Portfolio: React.FC<Props> = ({toggleOn}) => {
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, [])
-
   
-  
-  
-  
-
-
   const filtering = () => {
     var containerEl = document.querySelector('.portfolio-container');
     mixitup(containerEl, {

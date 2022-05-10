@@ -4,8 +4,12 @@ import { Container, Row, Col } from "reactstrap";
 import  MainImage from "../images/main-img.png" 
 
 
+interface Props {
+  toggleOn: boolean
+}
 
-const Main = ({toggleOn}) => {
+
+const Main: React.FC<any> = ({toggleOn}: Props) => {
     return (
     <>
     <Container className="main" fluid={false}>
