@@ -14,9 +14,12 @@ import { useFormik } from 'formik'
 import CircularProgress from '@mui/material/CircularProgress';
 import Tooltip from '@mui/material/Tooltip';
 
-const Contact = ({toggleOn, setIsLoading, isLoading}) => {
 
-  const ref = useRef()
+
+
+const Contact: React.FC<any>= ({toggleOn, setIsLoading, isLoading}) => {
+
+  const ref = useRef<any>()
 
 
   const [modal, setModal] = useState(false);
@@ -36,8 +39,8 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
       console.log(err)
     } 
   }
-  const validate = (values) => {
-    let errors = {}
+  const validate = (values: any) => {
+    let errors: any = {}
     const mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if(!values.name){
       errors.name = 'Name Required'
@@ -94,7 +97,6 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
             <div className="col-md-6" data-aos="fade-right">
               <div className='position-relative'>
                 <input 
-                  name='name'
                   {... formik.getFieldProps('name')}
                   className={toggleOn ? `contact-input-light ${formik.errors.name && formik.touched.name && `red`}` : `contact-input ${formik.errors.name && formik.touched.name && `red`}`}
                   type="text" 
@@ -113,7 +115,6 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
               </div>
               <div className='position-relative'>
                 <input 
-                  name='email'
                   {... formik.getFieldProps('email')}
                   className={toggleOn ? `contact-input-light ${formik.errors.email && formik.touched.email && `red`}` : `contact-input ${formik.errors.email && formik.touched.email && `red`}`}
                   type="email" 
@@ -131,7 +132,6 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
               </div>
               <div className='position-relative'>
                 <input 
-                  name='phone'
                   {... formik.getFieldProps('phone')}
                   className={toggleOn ? `contact-input-light ${formik.touched.phone && formik.errors.phone && `red`}` : `contact-input ${formik.touched.phone && formik.errors.phone && `red`}`}
                   type="text" 
@@ -154,14 +154,13 @@ const Contact = ({toggleOn, setIsLoading, isLoading}) => {
               </div>
             </div>
             <div className="col-md-6 position-relative" data-aos="fade-left">
-              <textarea
-                name='message'
-                {... formik.getFieldProps('message')}
-                type='text'
-                placeholder='Enter your message'
+              <input
                 className={toggleOn ? `contact-textarea-light ${formik.touched.message && formik.errors.message && `red`}` : `contact-textarea ${formik.touched.message && formik.errors.message && `red`}`}
+                {... formik.getFieldProps('message')}
+                type='textarea'
+                placeholder='Enter your message'
               >
-              </textarea>
+              </input>
               <div>
                  {formik.errors.message && formik.touched.message && 
                   (

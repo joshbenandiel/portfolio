@@ -10,6 +10,7 @@ import mixitup from 'mixitup'
 import netflix from '../images/netflix.png'
 import ecommerce from '../images/ecommerce.png'
 import emart from '../images/emart.jpg'
+import facebook from '../images/facebook.PNG'
 
 
 
@@ -85,6 +86,16 @@ const Portfolio = ({toggleOn}) => {
                   <img className='netflix-website' src={emart} alt="netflix-website" />
                   <div className='visit-page-button'>
                     <a href="https://ecommerceapi.netlify.app/" target='_blank' rel="noopener noreferrer">
+                      <button className='btn btn-outline-danger' type="button">Visit Page</button>
+                    </a>
+                  </div>
+              </div>
+            </div>
+            <div className="mix category-a" data-order="4">
+              <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
+                  <img className='netflix-website' src={facebook} alt="netflix-website" />
+                  <div className='visit-page-button'>
+                    <a href="https://facebookv2.netlify.app/" target='_blank' rel="noopener noreferrer">     
                       <button className='btn btn-outline-danger' type="button">Visit Page</button>
                     </a>
                   </div>
