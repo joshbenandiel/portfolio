@@ -6,18 +6,18 @@ import logo from '../images/logo.png'
 
 interface Props {
   handleToggle: () => any
-  toggleOn: boolean
+  toggleOn: boolean | null
 }
 
 const Navbar: React.FC<any> = ({ handleToggle , toggleOn}: Props) => {
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState<boolean|undefined>(false)
 
   return ( 
    <div className='position-relative'>
     <div className={isOpen ? 'navbar-open-container-true' : 'navbar-open-container'}>
     </div>
-    <ul className='text-white nav_menu_list_open p-0'>
+    <ul className={isOpen ? 'nav_menu_list_open text-white p-0' : 'nav_menu_list'}>
       <Link onClick={() => setIsOpen(false)} className={`menu-link-open ${isOpen ? `home-open` : `home`}`} to="home" spy={true} smooth={true} duration={1000}>Home</Link>
       <Link onClick={() => setIsOpen(false)} className={`menu-link-open ${isOpen ? `about-open` : `about`}`} to="about" spy={true} smooth={true} duration={1000}>About</Link>
       <Link onClick={() => setIsOpen(false)}  className={`menu-link-open ${isOpen ? `portfolio-open` : `portfolio`}`} to="portfolio" spy={true} smooth={true} duration={1000}>Portfolio</Link>

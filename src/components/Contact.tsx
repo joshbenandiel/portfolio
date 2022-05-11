@@ -17,15 +17,15 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 
 interface Props {
-  toggleOn: boolean
+  toggleOn: boolean | null
   setIsLoading: (loading: boolean) => void
-  isLoading: boolean
+  isLoading: boolean | null
 }
 
 interface ValidationInterface {
   name: string
-  email: any
-  phone: any
+  email: string
+  phone: number | any
   message: string | number
 }
 

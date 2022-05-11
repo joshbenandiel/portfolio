@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 interface Props {
   title: string
-  toggleOn: boolean
+  toggleOn: boolean | null
 }
 
 

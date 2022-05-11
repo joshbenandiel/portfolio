@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
 interface Props {
-  toggleOn: boolean
+  toggleOn: boolean | null
 }
 
 const WhoAmI: React.FC<Props> = ({toggleOn}) => {

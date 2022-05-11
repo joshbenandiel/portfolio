@@ -14,7 +14,7 @@ import facebook from '../images/facebook.png'
 const mixitup = require('mixitup');
 
 interface Props {
-  toggleOn: boolean
+  toggleOn: boolean | null
 }
 
 const Portfolio: React.FC<Props> = ({toggleOn}) => {

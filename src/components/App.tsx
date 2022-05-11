@@ -12,13 +12,13 @@ import { useState } from "react"
 
 const App: React.FC<any> = () => {
 
-  const [toggleOn, setToggleOn] = useState<any | null>(false);
+  const [toggleOn, setToggleOn] = useState<boolean | null>(false);
 
   const handleToggle = () => {
     setToggleOn(!toggleOn);
   }
 
-  const [isLoading, setIsLoading] = useState<any | null>(false)
+  const [isLoading, setIsLoading] = useState<boolean | null>(false)
   return (
         <div className={toggleOn ? "App-on position-relative" : "App position-relative"}>
           <Navbar
