@@ -9,7 +9,7 @@ import '../styles/PortfolioCard.css'
 import netflix from '../images/netflix.png'
 import ecommerce from '../images/ecommerce.png'
 import emart from '../images/emart.jpg'
-import fb from '../images/facebook.png'
+import fb from '../images/fb.png'
 
 const mixitup = require('mixitup');
 
