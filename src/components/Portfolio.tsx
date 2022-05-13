@@ -9,7 +9,7 @@ import '../styles/PortfolioCard.css'
 import netflix from '../images/netflix.png'
 import ecommerce from '../images/ecommerce.png'
 import emart from '../images/emart.jpg'
-import facebook from '../images/facebook.png'
+import fb from '../images/facebook.png'
 
 const mixitup = require('mixitup');
 
@@ -90,7 +90,7 @@ const Portfolio: React.FC<Props> = ({toggleOn}) => {
             </div>
             <div className="mix category-a" data-order="4">
               <div className={toggleOn ? "portfolio-card-light" : "portfolio-card"}>
-                  <img className='netflix-website' src={facebook} alt="netflix-website" />
+                  <img className='netflix-website' src={fb} alt="netflix-website" />
                   <div className='visit-page-button'>
                     <a href="https://facebookv2.netlify.app/" target='_blank' rel="noopener noreferrer">     
                       <button className='btn btn-outline-danger' type="button">Visit Page</button>
