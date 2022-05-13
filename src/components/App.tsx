@@ -6,6 +6,9 @@ import Contact from './Contact'
 import ScrollToTop from "./ScrollToTop"
 import "../styles/App.css"
 import { useState } from "react"
+import { Languages } from "./Languages"
+// import { Languages } from "./Languages"
+
 
 
 
@@ -31,6 +34,7 @@ const App: React.FC<any> = () => {
           <Who
            toggleOn={toggleOn}
           />
+          <Languages/>
           <Portfolio
             toggleOn={toggleOn}
           />

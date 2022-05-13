@@ -1,0 +1,91 @@
+
+
+.language-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.language-box {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.language-text {
+  margin-top: 30px;
+  color: #A1A2A3;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.language-box.active .language-wrapper {
+  transform: rotate(315deg);
+}
+
+.language-wrapper {
+  height: 120px;
+  width: 120px;
+  background-image: url('../images/languages/forest.jpg');
+  object-fit: cover;
+  /* background-color: #fff; */
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+}
+
+.add-icon-language {
+  pointer-events: none;
+  filter: brightness(4);
+}
+
+.language-images-wrapper {
+  position: absolute;
+  transform-origin: 250px;
+  left: 0;
+  cursor: pointer;
+  list-style: none;
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+  transform: translateX(210px);
+  z-index: -1;
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.language-box.active li {
+   transform: rotate(calc(360deg / 8 * var(--i)));
+   z-index: 1;
+}
+
+.language-images {
+  padding: 5px;
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  pointer-events: none;
+  background-image: linear-gradient(to right top, #313337, #2d2f33, #292b30, #25282c, #212429);
+  box-shadow: -7px 1px 26px -5px rgba(133,127,127,0.75);
+}
+
+.language-typewritter {
+  margin-top: 40px;
+  font-weight: bold;
+}
